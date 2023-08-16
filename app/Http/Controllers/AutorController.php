@@ -28,7 +28,7 @@ class AutorController extends Controller
         $autor = $autor->noticias()->saveMany([$noticia1, $noticia2]);
     }
 
-    public function eliminarNoticias(Request $request, $id)
+   /* public function eliminarNoticias(Request $request, $id)
 
     {
         $autor = Autor::find($id);
@@ -38,6 +38,7 @@ class AutorController extends Controller
         $autor->noticias()->delete();
         return redirect()->back()->with('success', 'Noticias eliminadas exitosamente');
     }
+    */
 }
 
 
