@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AutorController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/autores', [AutorController::class, 'index']);
+Route::get('/cargar', [AutorController::class, 'cargarDatos']);
+Route::get('/eliminar/{id}', [AutorController::class, 'eliminarNoticias']);
